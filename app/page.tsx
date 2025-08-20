@@ -176,7 +176,7 @@ function renderMarkdown(text: string): ReactNode {
       nodes.push(
         <h3
           key={`h3-${i}`}
-          className="text-[15px] sm:text-base font-semibold text-zinc-100 mb-1 mt-1 tracking-[-0.01em]"
+          className="text-[17px] sm:text-base font-semibold text-zinc-100 mb-1 mt-1 tracking-[-0.01em]"
         >
           {renderInlineBold(h3[1])}
         </h3>
@@ -644,7 +644,9 @@ export default function Home() {
   }, [lastAssistantIndex, messages]);
 
   return (
-    <main className={`min-h-screen bg-gradient-to-b from-neutral-950 to-neutral-900 p-4 text-zinc-200 ${lightMode ? "light" : ""}`}>
+<main
+  className={`ui-scale min-h-screen bg-gradient-to-b from-neutral-950 to-neutral-900 p-4 text-zinc-200 ${lightMode ? "light" : ""}`}
+>
       <div className="mx-auto w-full max-w-7xl">
         {/* Header */}
         {/* Navbar */}
@@ -653,12 +655,12 @@ export default function Home() {
             <div className="flex h-14 items-center justify-between px-4">
               {/* Left: brand + links */}
               <div className="flex items-center gap-8">
-                <a href="#" className="text-lg font-semibold tracking-tight text-zinc-100">VoyAIge</a>
+                <a href="#" className="text-1.5xl md:text-3xl font-semibold tracking-tight text-zinc-100">VoyAIge</a>
                 <div className="hidden md:flex items-center gap-6 text-sm">
-                  <a href="#" className="text-zinc-400 hover:text-zinc-200">Features</a>
-                  <a href="#" className="text-zinc-400 hover:text-zinc-200">Pricing</a>
-                  <a href="#" className="text-zinc-400 hover:text-zinc-200">About</a>
-                  <a href="#" className="text-zinc-400 hover:text-zinc-200">Contact</a>
+                  <a href="#" className="px-2 tracking-wide text-zinc-400 hover:text-zinc-200">Features</a>
+                  <a href="#" className="px-2 tracking-wide text-zinc-400 hover:text-zinc-200">Pricing</a>
+                  <a href="#" className="px-2 tracking-wide text-zinc-400 hover:text-zinc-200">About</a>
+                  <a href="#" className="px-2 tracking-wide text-zinc-400 hover:text-zinc-200">Contact</a>
                 </div>
               </div>
 
@@ -736,7 +738,7 @@ export default function Home() {
 
                     <div
                       data-role={m.role}
-                      className={`rounded-2xl px-4 py-3 text-[15px] leading-relaxed ${
+                      className={`rounded-2xl px-4 py-3 text-[17px] leading-relaxed ${
                         m.role === "user"
                           ? "bg-neutral-950 text-zinc-100 shadow-sm"
                           : m.role === "error"
@@ -756,7 +758,7 @@ export default function Home() {
                     </div>
 
                     {m.role === "user" && (
-                      <div className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-neutral-900" aria-hidden>
+                      <div className="relative top-1.5 mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-neutral-900" aria-hidden>
                         <UserRound className="h-4 w-4 text-zinc-300" />
                       </div>
                     )}
@@ -807,7 +809,7 @@ export default function Home() {
                 onKeyDown={onKeyDown}
                 placeholder="How may I assist you today?"
                 rows={1}
-                className="max-h-48 w-full resize-none bg-transparent px-2 py-2 text-zinc-200 outline-none placeholder:text-zinc-500"
+                className="max-h-48 w-full resize-none bg-transparent px-2 py-2 text-[16px] sm:text-[17px] text-zinc-200 outline-none placeholder:text-zinc-500"
                 disabled={loading}
                 aria-label="Message"
               />
@@ -912,7 +914,7 @@ function ItineraryView({ data }: { data: ItineraryPayload }) {
   return (
     <div className="rounded-xl border border-neutral-800 bg-neutral-950/40 p-4">
       <div className="mb-2">
-        <div className="text-base font-semibold text-zinc-100 tracking-[-0.01em]">
+        <div className="text-[17px] font-semibold text-zinc-100 tracking-[-0.01em]">
           {meta?.destination} • <span suppressHydrationWarning>{fmtDate(meta?.start_date)}</span> → <span suppressHydrationWarning>{fmtDate(meta?.end_date)}</span>
         </div>
         <div className="mt-1 flex flex-wrap items-center gap-3 text-xs text-zinc-400">
