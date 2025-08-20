@@ -5,7 +5,7 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
 
     // const webhookUrl = 'https://vishan305.app.n8n.cloud/webhook/b28d756f-f64b-4d83-9387-c2be97a2298f'; // prod
-    const webhookUrl = 'https://vishan305.app.n8n.cloud/webhook/b28d756f-f64b-4d83-9387-c2be97a2298f'; // test
+    const webhookUrl = 'https://v305.app.n8n.cloud/webhook/2602e5c5-9bbb-4106-8ec2-468d0226e175'; // test
 
     const response = await fetch(webhookUrl, {
       method: 'POST',
