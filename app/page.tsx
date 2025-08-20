@@ -912,7 +912,7 @@ function ItineraryView({ data }: { data: ItineraryPayload }) {
   const days = data.itinerary || [];
   const current = days[dayIndex];
   return (
-    <div className="rounded-xl border border-neutral-800 bg-neutral-950/40 p-4">
+    <div className="rounded-xl bg-neutral-950/40 p-4">
       <div className="mb-2">
         <div className="text-[17px] font-semibold text-zinc-100 tracking-[-0.01em]">
           {meta?.destination} • <span suppressHydrationWarning>{fmtDate(meta?.start_date)}</span> → <span suppressHydrationWarning>{fmtDate(meta?.end_date)}</span>
@@ -927,6 +927,7 @@ function ItineraryView({ data }: { data: ItineraryPayload }) {
       </div>
 
       <div className="mt-3 flex items-center justify-between rounded-lg border border-neutral-800 bg-neutral-950/60 px-3 py-2">
+
         <button
           onClick={() => setDayIndex((i) => Math.max(0, i - 1))}
           className="inline-flex items-center gap-2 rounded-md border border-neutral-800 bg-neutral-950/40 px-3 py-1.5 text-xs text-zinc-200 hover:bg-neutral-900 disabled:opacity-50"
@@ -953,7 +954,7 @@ function ItineraryView({ data }: { data: ItineraryPayload }) {
 
 function DayCard({ day }: { day: DayPlan }) {
   return (
-    <div className="rounded-lg border border-neutral-800 bg-neutral-950/60 p-3">
+    <div className="rounded-lg bg-neutral-950/60 p-3">
       <div className="mb-2 text-sm font-semibold text-zinc-300">
         Day {day.day} • <span suppressHydrationWarning>{fmtDate(day.date)}</span>
       </div>
