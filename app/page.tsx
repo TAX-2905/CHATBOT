@@ -650,7 +650,7 @@ export default function Home() {
       <div className="mx-auto w-full max-w-7xl">
         {/* Header */}
         {/* Navbar */}
-        <nav className="mb-4 border-b border-neutral-800/60">
+        <nav className="pb-4 mb-9 border-b border-neutral-800/60">
           <div className="mx-auto w-full max-w-7xl">
             <div className="flex h-14 items-center justify-between px-4">
               {/* Left: brand + links */}
